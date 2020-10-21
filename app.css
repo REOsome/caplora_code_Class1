@@ -1,6 +1,6 @@
 body{
     background-image: url('./assets/Path\ 1.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: top right;
 }
@@ -40,11 +40,18 @@ ul {
     float:left;
     font-size:large;
 }
-.btn{
-  margin-right:50%;
-  height:70px;
-  width: 150px;
-  border-radius:30px !important;
-  border: none;
-  font-size: 30px !important;
+ 
+
+.calculator{
+  height:100vh;
+  background-color:grey ;
+}
+
+.functionality{
+  height:100vh;
+}
+
+.numberpad{
+  height:100vh;
+  background-color:tomato ;
 }
