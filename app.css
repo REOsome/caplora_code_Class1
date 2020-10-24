@@ -55,3 +55,20 @@ ul {
   height:100vh;
   background-color:tomato ;
 }
+.margin{
+  margin-bottom:20px;
+}
+.numbtn{
+  height:30vh;
+}
+.functionality #display{
+  height:50vh;
+  background-color:white ;
+}
+.functionality .symbols{
+  height:50vh;
+  background-color: tomato;
+}
+.sybtn{
+  height:20vh;
+}
