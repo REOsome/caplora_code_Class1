@@ -41,7 +41,7 @@
         <div class="symbols">
           <div class="row">
             <div class="col-sm-4">
-              <button type="button" class="btn btn-dark col-sm-12 margin sybtn">+</button>
+              <button type="button" onclick="handlesym('ádd')" class="btn btn-dark col-sm-12 margin sybtn">+</button>
             </div>
             <div class="col-sm-4">
               <button type="button" class="btn btn-dark col-sm-12 margin sybtn">-</button>
@@ -55,10 +55,10 @@
                 <button type="button" class="btn btn-dark col-sm-12 margin sybtn">*</button>
               </div>
               <div class="col-sm-4">
-                <button type="button" class="btn btn-dark col-sm-12 margin sybtn">=</button>
+                <button type="button" onclick="execute()" class="btn btn-dark col-sm-12 margin sybtn">=</button>
               </div>
               <div class="col-sm-4">
-                <button type="button" class="btn btn-dark col-sm-12 margin sybtn">%</button>
+                <button type="button" onclick="handlesym('mod')" class="btn btn-dark col-sm-12 margin sybtn">%</button>
               </div>
         </div>
  
@@ -67,10 +67,10 @@
       <div class="col-sm-6 numberpad">
         <div class="row">
           <div class="col-sm-4">
-            <button type="button" class="btn btn-dark col-sm-12 margin numbtn">1</button>
+            <button type="button" onclick='handlenumberPad(1)' class="btn btn-dark col-sm-12 margin numbtn">1</button>
           </div>
           <div class="col-sm-4">
-            <button type="button" class="btn btn-dark col-sm-12 margin numbtn">2</button>
+            <button type="button" onclick='handlenumberPad(2)' class="btn btn-dark col-sm-12 margin numbtn">2</button>
           </div>
           <div class="col-sm-4">
             <button type="button" class="btn btn-dark col-sm-12 margin numbtn">3</button>
@@ -110,8 +110,6 @@
   </section> 
 </div>
   </body>
-
-
-  
-</body>
+<!-- linking js  in html -->
+ <script src="./app.js"></script>
 </html>
