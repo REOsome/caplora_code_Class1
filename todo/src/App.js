@@ -3,16 +3,18 @@ import './App.css';
 import logo from './assets/logo.png'
 
 
-class Navigation extends React.Component {
-  render() {
+function Navigation({name:_name})  {
+  
     return (<ul>
       <a className="navbar-brand" href="/#"><img src={logo} alt='logo..' height='150px' /> </a>
       <li><a className="active" href="#home">Home</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
+    <li><a href="#about">{
+       _name
+    }</a></li>
     </ul>);
-  }
+  
 }
 class Body extends React.Component {
   constructor(props) {
@@ -21,13 +23,13 @@ class Body extends React.Component {
       name: null
     }
   }
-  handleinp(target) { 
+  handleinp(target) {
     this.setState({
-      name:target.value
+      name: target.value
     })
   }
   render() {
-    return (<> <div id="paragraph">
+    return (<> <Navigation name={this.state.name} /> <div id="paragraph">
       <h1>{this.state.name}</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris ligula, semper varius orci quis, lacinia
       ornare ante. Nulla a viverra mi, vel auctor nisl. Suspendisse commodo dui eu odio aliquam, ut fermentum ante
@@ -59,7 +61,7 @@ function App() {
   return (
     < div className='body'>
       <div className='container'>
-        <Navigation />
+       
         <Body />
 
       </div>
