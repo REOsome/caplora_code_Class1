@@ -1,77 +1,62 @@
 import React from 'react';
 import './App.css';
-import logo from './assets/logo.png'
 
+function Navigation() {
+  return <div className='container'>
+    <ul>
+      <li>SUN</li>
+      <li>Mon</li>
+      <li>Tue</li>
+      <li>WED</li>
+      <li>THU</li>
+      <li>FRI</li>
+      <li>SAT</li>
+    </ul>
+  </div>
 
-function Navigation({name:_name})  {
-  
-    return (<ul>
-      <a className="navbar-brand" href="/#"><img src={logo} alt='logo..' height='150px' /> </a>
-      <li><a className="active" href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">{
-       _name
-    }</a></li>
-    </ul>);
-  
 }
-class Body extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      name: null
-    }
-  }
-  handleinp(target) {
-    this.setState({
-      name: target.value
-    })
-  }
-  render() {
-    return (<> <Navigation name={this.state.name} /> <div id="paragraph">
-      <h1>{this.state.name}</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris ligula, semper varius orci quis, lacinia
-      ornare ante. Nulla a viverra mi, vel auctor nisl. Suspendisse commodo dui eu odio aliquam, ut fermentum ante
-      bibendum. Pellentesque maximus vitae dui vel maximus. Quisque nulla tellus, imperdiet vel luctus vel, tristique
-      non ex. Nam non neque ut felis tincidunt rhoncus molestie sit amet lacus. Etiam dui ipsum, sollicitudin non
-      massa quis, cursus convallis massa. Aenean euismod metus a lacinia convallis. Nulla nec libero at purus blandit
-      volutpat id a ante. Sed id erat lorem. Nunc eleifend eleifend lectus ut posuere. Suspendisse sit amet efficitur
-  mauris. Praesent non aliquam neque. Nulla nec erat imperdiet, pretium ligula at, iaculis justo.</p>
-      <div className="button">
-        <input id='text' onKeyUp={
-          () => {
-            this.handleinp(document.getElementById('text'))
-          }
-        } />
-        <button type="button" onClick={
-          () => {
-            this.setState({
-              name: 'Ryan and Kelsey'
-            })
-          }
-        } className="btn btn-danger btn-rounded btn-lg ">More</button>
-      </div>
-
-    </div></>)
-  }
-}
-
 function App() {
-  return (
-    < div className='body'>
-      <div className='container'>
-       
-        <Body />
+  return <div className='app'>
+      <SideBar />
+      <div className='wrapper'>
 
+        <h1>Running Tasks</h1>
+        <p> Task Calendar</p>
+        <Navigation />
       </div>
+      
     </div>
-  )
+  
+
+
+}
+function SideBar() {
+  return <div className='sidebar'>
+    <ul>
+      <a className="navbar-brand" href="#"></a>
+      <li><a href="#samuel spencer">Samuel Spencer</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a className="active" href="#todo">To do</a></li>
+      <li><a href="#setting">Setting</a></li>
+    </ul>
+    <Users />  
+</div>
+}
+function Users() {
+  return <div className= 'users'>
+    <h1>Users</h1><h1>Followers</h1>
+    <button>Search user</button>
+    <ul>
+      <li>Phillip Santos</li>
+      <li>Jorge Morgan</li>
+      <li>Nannie Townsend</li>
+    </ul>
+  </div>
+  
 }
 
 
 
 
 
-
-export default App
+export default App 
