@@ -1,24 +1,25 @@
-.body{
+.body {
   background-image: url('./assets/bg.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: top right; 
+  background-position: top right;
   height: 100vh;
   width: 100vw;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 li {
   float: left;
 }
 
-li  {
+li {
   display: block;
   color: rgb(17, 15, 15);
   text-align: center;
@@ -30,37 +31,86 @@ li  {
 li a:hover {
   background-color: #111;
 }
-.navbar-brand{
+
+.navbar-brand {
   float: left;
-}
-#paragraph {
-  width:600px;
-  padding-top:20%;
-  float:left;
-  font-size:large;
-}
-.app{
-height: 100vh;
 }
 
-.app >.sidebar{
-  width: 20vw;
-  height: 100vh;
-  background-color: rgb(233, 233, 233)  ;
+#paragraph {
+  width: 600px;
+  padding-top: 20%;
   float: left;
+  font-size: large;
 }
-.wrapper{
+
+.app {
+  height: 100vh;
+}
+
+.app>.sidebar {
+  width: 20vw;
+  min-height: 100vh;
+  background-color: rgb(233, 233, 233);
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
   width: 75vw;
   height: 20vh;
   float: left;
   border: solid black 1px;
 }
-.container{
+
+.container {
   width: 95vw;
   float: left;
 }
-.users{
+
+.users {
   width: 20vw;
   height: 20vh;
-  float : left;
+  float: left;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 8px 3px rgba(0, 0, 0, 0.52);
+  box-shadow: 1px 1px 8px 3px rgba(0, 0, 0, 0.52);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.card>.avator {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.a {
+  opacity: 0.6;
+}
+
+.b {
+  fill: none;
+  stroke: #8686a5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
 }
